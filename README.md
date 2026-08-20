@@ -19,7 +19,7 @@ brings your KoReader reading stats to life with a clean, web-based dashboard
 
 
 ## Screenshots
-![Screenshot of KoInsight](./doc/screenshots/example.jpg)
+![Screenshot of KoInsight](./doc/screenshots/koinsight.png)
 
 ## 📦 Developer info
 
