@@ -39,7 +39,7 @@ popd
 ynh_script_progression "Migrating database..."
 
 pushd "$install_dir/apps"
-	ynh_hide_warnings ynh_exec_as_app DATA_PATH=$data_dir npm build:migrations
+	ynh_hide_warnings ynh_exec_as_app DATA_PATH=$data_dir npm run build:migrations
 popd
 
 #=================================================
