@@ -30,6 +30,7 @@ ynh_script_progression "npm install... This can be very long, be patient !"
 
 pushd $install_dir
 	ynh_hide_warnings ynh_exec_as_app npm ci --quiet --production
+    ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
 pushd "$install_dir/apps"
