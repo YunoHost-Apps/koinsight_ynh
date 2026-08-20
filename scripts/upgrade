@@ -32,9 +32,20 @@ pushd $install_dir
     ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
+#=================================================
+# MIGRATE DATABASE
+#=================================================
+ynh_script_progression "Migrating database..."
+
+set -a
+
+source $install_dir/.env
+
 pushd "$install_dir/apps"
 	ynh_hide_warnings ynh_exec_as_app DATA_PATH=$data_dir npm run -w server knex migrate:latest
 popd
+
+set +a
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
