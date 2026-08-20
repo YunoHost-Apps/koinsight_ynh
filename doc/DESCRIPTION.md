@@ -1,0 +1,1 @@
+KoInsight brings your [KOReader](https://koreader.rocks/) reading stats to life with a clean, web-based dashboard. 
