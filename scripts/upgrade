@@ -21,7 +21,7 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace
 #=================================================
 ynh_script_progression "Updating $app's configuration files..."
 
-ynh_config_add --template=".env" --destination="$install_dir/apps/server/src/.env"
+ynh_config_add --template=".env" --destination="$install_dir/.env"
 
 #=================================================
 # BUILD APP
@@ -31,15 +31,6 @@ ynh_script_progression "Upgrading $app... please be patient !"
 pushd $install_dir
 	ynh_hide_warnings ynh_exec_as_app npm ci --quiet
     ynh_hide_warnings ynh_exec_as_app npm run build
-popd
-
-#=================================================
-# MIGRATE DATABASE
-#=================================================
-ynh_script_progression "Migrating database..."
-
-pushd "$install_dir/apps"
-	ynh_hide_warnings ynh_exec_as_app DATA_PATH=$data_dir npm run build:migrations
 popd
 
 #=================================================
