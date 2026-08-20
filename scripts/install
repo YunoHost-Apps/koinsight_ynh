@@ -39,7 +39,7 @@ popd
 ynh_script_progression "Initializing database..."
 
 pushd "$install_dir/apps"
-	ynh_hide_warnings DATA_PATH=$data_dir npm run -w server knex migrate:latest
+	DATA_PATH=$data_dir npm run -w server knex migrate:latest
 popd
 
 #=================================================
