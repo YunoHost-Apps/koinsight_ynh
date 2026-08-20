@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+KoInsight brings your [KOReader](https://koreader.rocks/) reading stats to life with a clean, web-based dashboard. 
